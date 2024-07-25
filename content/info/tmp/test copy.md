@@ -1,17 +1,12 @@
 ---
-title: '技術の進化とその影響'
+title: '技術の進化とその影響２'
 date: 2024-07-25T21:46:37+09:00
 lastmod: 2024-07-25T21:46:37+09:00
 
-description: "個のページは，xxxxを掲載します．"
-siteSub: ""
-img : 
-  articleRight: "img/pencil.jpg"
-  alt: "img alt"
-  caption: "img caption"
+description: "個のページは，2xxxxを掲載します．"
 
 categories: ["技術"]
-tags: ["Hugo", "静的サイト"]
+tags: ["歴史", "進化"]
 ---
 
 ## テクノロジーの歴史

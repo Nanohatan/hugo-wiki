@@ -5,10 +5,25 @@ title = 'My New Hugo Site'
   [markup.tableOfContents]
     endLevel = 3
     ordered = false
-    startLevel = 1
+    startLevel = 2
 [frontmatter]
 lastmod = ["lastmod", ":git", "date"]
 
 [taxonomies]
   category = "categories"
   tag = "tags"
+
+
+[menus]
+  [[menus.main]]
+    name = 'Q and A'
+    pageRef = '/qanda'
+    weight = 10
+  [[menus.main]]
+    name = 'Contract'
+    pageRef = '/contract'
+    weight = 20
+  [[menus.main]]
+    name = 'Portal'
+    pageRef = '/'
+    weight = 1
