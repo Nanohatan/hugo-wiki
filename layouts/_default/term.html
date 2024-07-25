@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+</head>
+<body>
+    <h1>{{ .Title }}</h1>
+    <ul>
+        {{ range .Pages }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a> - created at {{ .Date.Format "2006-01-02" }}, edited at {{ .Lastmod.Format "2006/01/02" }}
+        </li>
+        {{ end }}
+    </ul>
+</body>
+</html>

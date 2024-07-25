@@ -10,11 +10,15 @@
   <main>
     <div class="wrapAll clearfix">
     {{ partial "sidebar.html" . }}
-    <div class="mainsection">{{ block "main" . }}{{ end }}</div>
+    <div class="mainsection">
+      {{ block "main" . }}{{ end }}
+      <footer>
+        {{ partial "footer.html" . }}
+      </footer>
+
+    </div>
     </div>
   </main>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+  
 </body>
 </html>

@@ -6,3 +6,9 @@ title = 'My New Hugo Site'
     endLevel = 3
     ordered = false
     startLevel = 1
+[frontmatter]
+lastmod = ["lastmod", ":git", "date"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
