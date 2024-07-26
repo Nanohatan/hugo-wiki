@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ partial "sidebar-section.html" . }}
+<div class="mainsection">
 {{ partial "mainsection-headerlinks.html" . }}
   <div class="article">
     <h1>{{ .Title }}</h1>
@@ -7,16 +9,19 @@
     <div class="contentsPanel">
         <div class="contentsHeader">Contents</div>
         <ul>
+            {{ .TableOfContents }}
             {{ range .Pages }}
             <li><a href="#{{ .LinkTitle }}">{{ .LinkTitle }}</a></li>
             {{ end }}
         </ul>
     </div>
+    {{ .Content }}
     {{ range .Pages }}
+
       <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
       <p> {{.Params.description}}</p>
     {{ end }}
-    {{ .Content }}
+   
 
     
     <div class="lavenderBox">
@@ -40,5 +45,10 @@
         <a href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Has et partem </a>
     </div>
     
+</div>
+<footer>
+    {{ partial "footer.html" . }}
+  </footer>
+</div>
 </div>
 {{ end }}

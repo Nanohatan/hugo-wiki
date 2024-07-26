@@ -1,4 +1,7 @@
 {{ define "main" }}
+<div class="wrapAll clearfix">
+{{ partial "sidebar.html" . }}
+<div class="mainsection">
 {{ partial "mainsection-headerlinks.html" . }}
   <div class="article">
     <h1>{{ .Title }}</h1>
@@ -31,5 +34,10 @@
 
     {{partial "lavenderBox.html" .}}
     
+</div>
+<footer>
+    {{ partial "footer.html" . }}
+  </footer>
+</div>
 </div>
 {{ end }}

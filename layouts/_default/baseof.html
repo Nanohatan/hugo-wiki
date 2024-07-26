@@ -8,16 +8,13 @@
     {{ partial "header.html" . }}
   </header>
   <main>
-    <div class="wrapAll clearfix">
-    {{ partial "sidebar.html" . }}
-    <div class="mainsection">
-      {{ block "main" . }}{{ end }}
-      <footer>
-        {{ partial "footer.html" . }}
-      </footer>
-
-    </div>
-    </div>
+    
+      
+      
+        {{ block "main" . }}{{ end }}
+        
+      </div>
+    
   </main>
   
 </body>

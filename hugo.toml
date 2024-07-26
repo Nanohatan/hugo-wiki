@@ -24,6 +24,6 @@ lastmod = ["lastmod", ":git", "date"]
     pageRef = '/contract'
     weight = 20
   [[menus.main]]
-    name = 'Portal'
+    name = 'Home'
     pageRef = '/'
     weight = 1
