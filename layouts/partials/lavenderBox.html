@@ -1,16 +1,17 @@
+{{$baseurl := .Site.BaseURL}}
 <div class="lavenderBox">
     <div class="header">tags, categories</div>
     <div class="subtitle linklist"><a href="#">tags</a></div>
     <div class="linklist">
         {{ range .Params.tags }}
-            <a href="/tags/{{ . }}">{{ . }}</a>
+            <a href="{{$baseurl }}tags/{{ . }}">{{ . }}</a>
         {{ end }}
     </div>
     
     <div class="subtitle linklist"><a href="#">categories</a></div>
     <div class="linklist">
         {{ range .Params.categories }}
-        <a href="/categories/{{ . }}">{{ . }}</a>
+        <a href="{{$baseurl }}categories/{{ . }}">{{ . }}</a>
         {{ end }}
     </div>
 </div>

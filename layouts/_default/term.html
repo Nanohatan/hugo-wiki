@@ -1,17 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ .Title }}</title>
-</head>
-<body>
-    <h1>{{ .Title }}</h1>
-    <ul>
-        {{ range .Pages }}
-        <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a> - created at {{ .Date.Format "2006-01-02" }}, edited at {{ .Lastmod.Format "2006/01/02" }}
-        </li>
-        {{ end }}
-    </ul>
-</body>
-</html>
+
+{{ define "main" }}
+<div class="wrapAll clearfix">
+{{ partial "sidebar.html" . }}
+<div class="mainsection">
+{{ partial "mainsection-headerlinks.html" . }}
+<div class="article">
+<h1>{{ .Title }}</h1>
+
+<p class="siteSub">{{.Params.siteSub}}</p>
+<p class="roleNote">{{.Params.description}}</p>
+
+{{if .Params.img }}
+<div class="articleRight">
+    
+    <div class="articleRightInner">
+        <img src="{{.Site.BaseURL}}{{.Params.img.articleRight}}" alt="{{.Params.img.alt}}" />
+    </div>
+    {{.Params.img.caption}}
+</div>
+{{end}}
+
+
+{{ range .Pages }}
+<li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a> - created at {{ .Date.Format "2006-01-02" }}, edited at {{ .Lastmod.Format "2006/01/02" }}
+</li>
+{{ end }}
+
+<footer>
+    {{ partial "footer.html" . }}
+</footer>
+</div>
+</div>
+{{ end }}
