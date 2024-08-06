@@ -9,7 +9,7 @@
         </ul>
     </div>
     <div id="simpleSearch">
-        <input type="text" name="searchInput" id="searchInput" placeholder="Search Wikipedia" size="12" />
+        <input type="text" name="searchInput" id="searchInput" placeholder="Search {{.Site.Title}}" size="12" />
         <div id="submitSearch"></div>
     </div>
     <div class="tabsRight">
@@ -21,3 +21,18 @@
     </div>
 
 </div>
+<script>
+    function redirectTo() {
+        var query = document.getElementById("searchInput").value;
+        var url = "{{.Site.BaseURL}}search/?" + encodeURIComponent(query);
+        window.location.href = url;
+    }
+
+    document.getElementById("searchInput").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            redirectTo();
+        }
+    });
+
+    document.getElementById("submitSearch").addEventListener("click", redirectTo);
+</script>
