@@ -2,10 +2,11 @@
     <span class="user">Not logged in</span> <a href="#">Talk</a> <a href="#">Contributions</a> <a href="#">Create account</a> <a href="#">Log in</a>
 </div>
 <div class="tabs clearfix">
-    <div class="tabsLeft">
+    <div class="tabsLeft"> 
         <ul>
-            <li><a href="#" class="active">Article</a></li>
-            <li><a href="#">Talk</a></li>						
+            {{ range $.Site.Home.AllTranslations }}
+            <li><a href="{{ .RelPermalink }}"  class="{{ if eq $.Language.Lang .Language.Lang }}active{{ end }}">{{ .Language.LanguageName }}</a></li>
+            {{ end }}					
         </ul>
     </div>
     <div id="simpleSearch">

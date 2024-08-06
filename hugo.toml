@@ -1,6 +1,26 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
 title = 'HUGOpedia'
+
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+[languages]
+  [languages.ja]
+    contentDir = 'content/ja'
+    disabled = false
+    languageCode = 'ja'
+    languageDirection = 'ltr'
+    languageName = 'Japanese'
+    weight = 2
+  [languages.en]
+    contentDir = 'content/en'
+    disabled = false
+    languageCode = 'en-US'
+    languageDirection = 'ltr'
+    languageName = 'English'
+    weight = 1
+
+
+
 [markup]
   [markup.tableOfContents]
     endLevel = 3
