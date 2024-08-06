@@ -4,9 +4,14 @@
 <div class="tabs clearfix">
     <div class="tabsLeft"> 
         <ul>
-            {{ range $.Site.Home.AllTranslations }}
-            <li><a href="{{ .RelPermalink }}"  class="{{ if eq $.Language.Lang .Language.Lang }}active{{ end }}">{{ .Language.LanguageName }}</a></li>
-            {{ end }}					
+            <li  ><a href="#" class="active">{{ $.Language.LanguageName }}</a></li>
+            {{ range .Translations }}
+                <li>
+                <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+                </li>
+            {{ end }}
+
+            
         </ul>
     </div>
     <div id="simpleSearch">
